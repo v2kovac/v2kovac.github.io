@@ -1,1 +1,37 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143706417-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143706417-1');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Seed Freezer</title>
+</head>
+<body>
+  <h1>gimme 💸💸 and i'll freeze your 💦💦💦</h1>
+  <iframe name='hidden-iframe' style='display: none'></iframe>
+  <form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/macros/s/AKfycbzNI7Ba1VL2cZdVNFUZjegQdXyero01yRy09BmU7l1MYTcmeSc/exec'>
+    <input id='input-text' type='text' name='Email'>
+    <input type='submit' value='Subscribe'>
+  </form>
+
+  <script>
+    $('#google-form').submit(function(e) {
+        e.preventDefault(); // don't submit multiple times
+        this.submit(); // use the native submit method of the form element
+        alert("Thx bby ❤️😈")
+        setTimeout(function(){ // Delay for Chrome
+          $('#input-text').val(''); // blank the input
+        }, 100);
+    });
+  </script>
+</body>
+</html>
